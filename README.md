@@ -24,18 +24,19 @@ Each of the three functions describes the real spatial X, Y, Z coordinates of a 
 
 
 ### File Structure 
-wire_modeling/
-    preprocessing.py        # Loads .parquet point cloud
-    clustering.py           # Clustering wires (DBSCAN, PCA)
-    fitting.py              # Plane of best fit, Catenary fitting, 3D equation generation, RMSE calculation
-scripts/
-    run_pipeline.py         # Makes the pipeline callable via process_lidar_file()
-tests/                      # To keep ensuring that the functions are working
-notebooks/
-    01_exploration.ipynb    # For all the tests along the creation of the package
-requirements.txt            # Gives all the necessary packages
-setup.py                    
-README.md
+
+    wire_modeling/
+        preprocessing.py        # Loads .parquet point cloud
+        clustering.py           # Clustering wires (DBSCAN, PCA)
+        fitting.py              # Plane of best fit, Catenary fitting, 3D equation generation, RMSE calculation
+    scripts/
+        run_pipeline.py         # Makes the pipeline callable via process_lidar_file()
+    tests/                      # To keep ensuring that the functions are working
+    notebooks/
+        01_exploration.ipynb    # For all the tests along the creation of the package
+    requirements.txt            # Gives all the necessary packages
+    setup.py                    
+    README.md
 
 
 ### Installation
@@ -44,6 +45,7 @@ Clone the repository and install the package locally :
 (I advise you to create a virtual environnement to do so)
 
 Here are the commands you have to use : 
+
     1. clone the repository, you can use : git clone <blunomy-wire-modeling_url> (use the url of the repository)
     2. Place yourself in the repository : cd blunomy-wire-modeling
     3. Install the package : pip install -e .
