@@ -23,20 +23,19 @@ In 3D, each wire is modeled as a vector function.
 Each of the three functions describes the real spatial X, Y, Z coordinates of a point on the wire depending on a 1D parameter x. This x parameter follows the direction of the wire (main PCA axis) in the plane of best fit.
 
 
-### File Structure 
+### Repository Structure 
 
-    wire_modeling/
-        preprocessing.py        # Loads .parquet point cloud
-        clustering.py           # Clustering wires (DBSCAN, PCA)
-        fitting.py              # Plane of best fit, Catenary fitting, 3D equation generation, RMSE calculation
-    scripts/
-        run_pipeline.py         # Makes the pipeline callable via process_lidar_file()
-    tests/                      # To keep ensuring that the functions are working
-    notebooks/
-        01_exploration.ipynb    # For all the tests along the creation of the package
-    requirements.txt            # Gives all the necessary packages
-    setup.py                    
-    README.md
+wire_modeling/
+├── preprocessing.py        # Loads .parquet point cloud
+├── clustering.py           # Clustering wires (DBSCAN, PCA)
+├── fitting.py              # Plane of best fit, Catenary fitting, 3D equation generation, RMSE calculation
+├── run_pipeline.py         # Makes the pipeline callable via process_lidar_file()
+tests/                      # To keep ensuring that the functions are working
+notebooks/
+├── 01_exploration.ipynb    # For all the tests along the creation of the package
+requirements.txt            # Gives all the necessary packages
+setup.py                    
+README.md
 
 
 ### Installation
@@ -46,13 +45,13 @@ Clone the repository and install the package locally :
 
 Here are the commands you have to use : 
 
-    1. clone the repository, you can use : git clone <blunomy-wire-modeling_url> (use the url of the repository)
-    2. Place yourself in the repository : cd blunomy-wire-modeling
-    3. Install the package : pip install -e .
-    4. Try your new installed package : run-wire-modeling data/lidar_cable_points_extrahard.parquet
+1. clone the repository, you can use : git clone <blunomy-wire-modeling_url> (use the url of the repository)
+2. Place yourself in the repository : cd blunomy-wire-modeling
+3. Install the package : pip install -e .
+4. Try your new installed package : run-wire-modeling data/lidar_cable_points_extrahard.parquet
 
-    Note1: You can change the second part of that last command if the point cloud .parquet file you want to use it on is not at that place.
-    Note2: You can change the "extrahard" part of the last command to try the package on 3 others pre downloaded files ("easy", "medium", "hard")
+Note1: You can change the second part of that last command if the point cloud .parquet file you want to use it on is not at that place.
+Note2: You can change the "extrahard" part of the last command to try the package on 3 others pre downloaded files ("easy", "medium", "hard")
 
 
 The required libraries should be installed automatically with the package, but, if not, you can install them manually using :
