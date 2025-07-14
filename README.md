@@ -75,4 +75,4 @@ It will:
 
 ### Limitation 
 
-Works very well when the wires à parallel or almost parallel to each others but I think it would require some changes if it is not the case.
+Works very well when the wires are parallel or almost parallel to each others but I think it would require some changes if it is not the case.
